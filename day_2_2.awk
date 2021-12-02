@@ -6,6 +6,6 @@ $0 ~ /forward/ {
 	horizontal_position += n
 	depth += aim * n
 } 
-$0 ~/down/ { match($0, /[0-9]+/); aim += substr($0,RSTART,RLENGTH) }
-$0 ~/up/ { match($0, /[0-9]+/); aim -= substr($0,RSTART,RLENGTH) }
+$0 ~ /down/ { match($0, /[0-9]+/); aim += substr($0,RSTART,RLENGTH) }
+$0 ~ /up/ { match($0, /[0-9]+/); aim -= substr($0,RSTART,RLENGTH) }
 END { print horizontal_position * depth }
