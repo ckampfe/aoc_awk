@@ -11,24 +11,16 @@ END {
 
     while(days_elapsed < 256) {
         zero = fish[0];
-        one = fish[1]
-        two = fish[2]
-        three = fish[3]
-        four = fish[4]
-        five = fish[5]
-        six = fish[6]
-        seven = fish[7]
-        eight = fish[8]
 
-        fish[8] = zero
-        fish[7] = eight
-        fish[6] = seven + zero
-        fish[5] = six
-        fish[4] = five
-        fish[3] = four
-        fish[2] = three
-        fish[1] = two
-        fish[0] = one
+        fish[0] = fish[1];
+        fish[1] = fish[2];
+        fish[2] = fish[3];
+        fish[3] = fish[4];
+        fish[4] = fish[5];
+        fish[5] = fish[6];
+        fish[6] = fish[7] + zero;
+        fish[7] = fish[8];
+        fish[8] = zero;
 
         days_elapsed++
     }
